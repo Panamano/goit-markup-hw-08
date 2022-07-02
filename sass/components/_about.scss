@@ -1,0 +1,48 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // &__header {
+  //   text-align: center;
+  //   margin: 0 0 50px;
+  //   // font-family: 'Roboto';
+  //   font-style: normal;
+  //   font-weight: 700;
+  //   font-size: 36px;
+  //   line-height: 42px;
+  //   text-align: center;
+  //   letter-spacing: 0.03em;
+  // }
+  &__list {
+    width: 1600px;
+    padding: 0px;
+    margin-left: 215px;
+    margin-right: 215px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  &__pic {
+    position: relative;
+    display: flex;
+    margin: 0 15px 0 15px;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    position: absolute;
+    top: 224px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+  }
+}

@@ -1,0 +1,45 @@
+.social {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+
+  &__icons {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    transition-property: background, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background: $blue;
+      cursor: pointer;
+    }
+    &--footer {
+      background: rgba(255, 255, 255, 0.1);
+      fill: white;
+    }
+    &--team {
+      fill: $icon-gray;
+      &:hover,
+      &:focus {
+        fill: white;
+      }
+    }
+  }
+  &__items {
+    display: flex;
+    padding-right: 10px;
+
+    &--team {
+      padding-bottom: 30px;
+    }
+    &--team:first-child {
+      padding-left: 32px;
+    }
+    &--team:last-child {
+      padding-right: 32px;
+    }
+  }
+}
