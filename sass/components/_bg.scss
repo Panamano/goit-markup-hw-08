@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 600px;
-  max-width: 1600px;
+  height: 400px;
+  max-width: 100%;
   margin: 0 auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,8 +13,8 @@
       rgba(63, 94, 251, 1) 0%,
       rgba(47, 48, 58, 0.4) 0%
     ),
-    url('../images/main-bg-photo.jpg');
-  background-size: cover;
+    url('../images/header-mobile.jpg');
+    background-size: 100%;
 
   &__list {
     display: flex;
@@ -23,8 +23,8 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 60px;
+    font-size: 26px;
+    line-height: 42px;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -32,24 +32,37 @@
     text-align: center;
     color: white;
   }
-  // &__button {
-  //   width: 200px;
-  //   height: 50px;
-  //   // padding: 10px 41px 10px 42px;
-  //   font-family: 'Roboto', sans-serif;
-  //   font-style: normal;
-  //   font-weight: 700;
-  //   font-size: 16px;
-  //   line-height: 30px;
-  //   margin: 0 auto;
-  //   align-items: center;
-  //   text-align: center;
-  //   letter-spacing: 0.06em;
-  //   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  //   border: 0;
-  //   border-radius: 4px;
-  //   cursor: pointer;
-  //   color: white;
-  //   background-color: $blue;
-  // }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .bg {
+   
+    
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .bg {
+    background-image: radial-gradient(
+      circle,
+      rgba(63, 94, 251, 1) 0%,
+      rgba(47, 48, 58, 0.4) 0%
+    ),
+    url('../images/header-tablet.jpg');
+    background-size: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg {
+    height: 600px;
+    background-image: radial-gradient(
+      circle,
+      rgba(63, 94, 251, 1) 0%,
+      rgba(47, 48, 58, 0.4) 0%
+    ),
+    url('../images/main-bg-photo.jpg');
+    background-size: cover;
+    &__title {
+      font-size: 44px;
+      line-height: 60px;
+    }
+  }
 }
