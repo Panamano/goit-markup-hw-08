@@ -192,14 +192,14 @@ header {
   height: 80px;
 }
 .header__navigation {
-  display: flex;
+  display: none;
   top: 32px;
   margin-right: 345px;
   align-items: center;
   list-style: none;
 }
 .header__contacts {
-  display: flex;
+  display: none;
   text-align: center;
   align-items: center;
   justify-content: space-between;
