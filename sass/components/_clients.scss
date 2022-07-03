@@ -29,7 +29,9 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-
+  &__box:nth-of-type(n + 5) {
+    margin: 0;
+  }
   &__box:hover,
   &__box:focus {
     fill: $blue;
@@ -48,6 +50,9 @@
     &__box {
       width: 226px;
     }
+    &__box:nth-of-type(n + 4) {
+      margin: 0;
+    }
   }
 }
 @media screen and (min-width: 1200px) {
@@ -55,6 +60,7 @@
     flex-wrap: nowrap;
     &__box {
       width: 170px;
+      margin: 0;
     }
   }
 }

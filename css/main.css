@@ -609,6 +609,9 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.client__box:nth-of-type(n + 5) {
+  margin: 0;
+}
 .client__box:hover, .client__box:focus {
   fill: #2196f3;
   border: 1px solid #2196f3;
@@ -618,6 +621,9 @@ header {
   .client__box {
     width: 226px;
   }
+  .client__box:nth-of-type(n + 4) {
+    margin: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .client {
@@ -625,6 +631,7 @@ header {
   }
   .client__box {
     width: 170px;
+    margin: 0;
   }
 }
 .footer {
