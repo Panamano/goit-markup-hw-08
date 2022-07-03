@@ -16,7 +16,7 @@ ul {
 }
 
 .section {
-  padding: 100% 0;
+  padding: 60px 0;
 }
 .section--about {
   padding-top: 0;
@@ -43,10 +43,6 @@ ul {
     max-width: 480px;
   }
 
-  .section {
-    padding: 60px 0;
-  }
-
   .portfolio-buttons {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -56,10 +52,6 @@ ul {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
     max-width: 768px;
-  }
-
-  .section {
-    padding: 60px 0;
   }
 
   .portfolio-buttons {
@@ -185,16 +177,14 @@ header {
 
 .header {
   background-color: #fff;
-  /* color: #212121; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 60px;
 }
 .header__navigation {
   display: none;
   top: 32px;
-  margin-right: 345px;
   align-items: center;
   list-style: none;
 }
@@ -283,6 +273,17 @@ header {
 .header__contact:last-child {
   margin-right: 0;
 }
+.header__hamburger {
+  background: url(../images/menu_hamburger.svg);
+  fill: #212121;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 16px;
+  position: absolute;
+  top: 22px;
+  right: 23px;
+}
 
 .active::after {
   content: "";
@@ -294,6 +295,46 @@ header {
   top: 33px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    height: 80px;
+  }
+  .header__hamburger {
+    display: none;
+  }
+  .header__navigation {
+    display: flex;
+  }
+  .header__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header__contact {
+    margin: 5px 0;
+  }
+  .header__contact:first-child {
+    margin: 5px 0 5px -2px;
+  }
+  .header__link2 {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 80px;
+  }
+  .header__hamburger {
+    display: none;
+  }
+  .header__navigation {
+    display: flex;
+    margin-right: 345px;
+  }
+  .header__contacts {
+    display: flex;
+  }
+}
 .bg {
   display: flex;
   flex-direction: column;
@@ -548,6 +589,7 @@ header {
 
 .client__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin: 0;
@@ -556,11 +598,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   fill: #afb1b8;
   border-radius: 4px;
+  margin-bottom: 30px;
   cursor: pointer;
   transition-property: fill, border;
   transition-duration: 250ms;
@@ -571,6 +614,19 @@ header {
   border: 1px solid #2196f3;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .client__box {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client {
+    flex-wrap: nowrap;
+  }
+  .client__box {
+    width: 170px;
+  }
+}
 .footer {
   height: 252px;
   /* max-width: 1600px; */

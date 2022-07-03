@@ -13,7 +13,7 @@ ul {
   padding: 0 15px;
 }
 .section {
-  padding: 100% 0;
+  padding: 60px 0;
   &--about {
     padding-top: 0;
   }
@@ -37,9 +37,7 @@ ul {
   .container {
     max-width: 480px;
   }
-  .section {
-    padding: 60px 0;
-  }
+  
   .portfolio-buttons {
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -50,9 +48,7 @@ ul {
   .container {
     max-width: 768px;
   }
-  .section {
-    padding: 60px 0;
-  }
+  
   .portfolio-buttons {
     flex-wrap: wrap;
     justify-content: center;
