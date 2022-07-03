@@ -42,22 +42,10 @@ ul {
   .container {
     max-width: 480px;
   }
-
-  .portfolio-buttons {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-bottom: 40px;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
     max-width: 768px;
-  }
-
-  .portfolio-buttons {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -67,12 +55,6 @@ ul {
 
   .section {
     padding: 94px 0;
-  }
-
-  .portfolio-buttons {
-    flex-wrap: nowrap;
-    justify-content: center;
-    padding-bottom: 50px;
   }
 }
 .button {
@@ -111,11 +93,11 @@ ul {
   margin-bottom: 40px;
 }
 .button--portfolio {
-  width: auto;
+  width: 90%;
   height: auto;
   font-weight: 500;
   padding: 6px 22px;
-  margin: 4px 0;
+  margin: 0 4px 15px;
   box-shadow: none;
   background-color: #f5f4fa;
   transition-property: color, background-color, box-shadow;
@@ -825,13 +807,20 @@ header {
 }
 .portfolio-buttons {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  padding-bottom: 25px;
 }
 
+@media screen and (min-width: 1200px) {
+  .portfolio-buttons {
+    padding-bottom: 35px;
+  }
+}
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .portfolio-cards__item {
   margin: 0 0 30px 0;
@@ -914,6 +903,11 @@ header {
   padding: 0 24px 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .portfolio-cards {
+    justify-content: space-between;
+  }
+}
 .modal {
   position: absolute;
   top: 50%;
