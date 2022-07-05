@@ -1,6 +1,4 @@
 .footer {
-  // height: 252px;
-  /* max-width: 1600px; */
   margin: 0 auto;
   background-color: $dark-gray;
   font-style: normal;
@@ -173,7 +171,21 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer {
     &__content {
+      display: flex;
       flex-wrap: wrap;
+      flex: 0 0 33%;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+    &__address {
+      margin-right: 72px;
+    }
+    &__social {
+      margin-left: 72px;
+    }
+    &__title {
+      padding-top: 65px;
     }
   }
 }
