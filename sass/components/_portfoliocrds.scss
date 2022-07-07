@@ -1,6 +1,7 @@
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
 
   &__item {
