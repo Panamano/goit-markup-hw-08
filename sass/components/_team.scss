@@ -21,13 +21,22 @@
   // }
   &__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    margin: 0;
+    justify-content: space-around;
+    // margin: 0 auto;
+  }
+  &__box {
+    padding: 0 15px 30px;
+  }
+  // &__box:first-child {
+  // }
+  &__box:last-child {
+    padding-bottom: 0px;
   }
   &__figure {
     margin: 0;
-    padding: 0 15px 0 15px;
+    // padding: 0 15px 30px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,12 +46,7 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
   }
-  &__figure:first-child {
-    padding-left: 0px;
-  }
-  &__figure:last-child {
-    padding-right: 0px;
-  }
+
   &__figure-title {
     margin: 0;
     padding: 30px 24px 10px;
@@ -69,37 +73,28 @@
     letter-spacing: 0.03em;
     padding: 0 24px 16px;
   }
-  // &__icons {
-  //   display: flex;
-  //   justify-content: space-evenly;
-  //   align-content: center;
-  // }
-  // &__icons--item {
-  //   padding-bottom: 30px;
-  // }
-  // &__icons--item:first-child {
-  //   padding-left: 32px;
-  // }
-  // &__icons--item:last-child {
-  //   padding-right: 32px;
-  // }
-  // &__icons--svg {
-  //   fill: $icon-gray;
-  //   height: 44px;
-  //   width: 44px;
-  //   border-radius: 50%;
-  //   transition-property: fill, background-color;
-  //   transition-duration: 250ms;
-  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  // }
-  // &__icons--svg:hover {
-  //   fill: white;
-  //   background: $blue;
-  //   cursor: pointer;
-  // }
-  // &__icons--svg:focus {
-  //   fill: white;
-  //   background: $blue;
-  //   cursor: pointer;
-  // }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team {
+    &__list {
+      justify-content: center;
+    }
+    &__box {
+      &:nth-child(n + 3) {
+        padding: 0 15px 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    &__list {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    &__box {
+      padding: 0 15px 0;
+    }
+  }
 }

@@ -10,8 +10,6 @@ header {
 
   &__navigation {
     display: none;
-    top: 32px;
-
     align-items: center;
     list-style: none;
   }
@@ -52,7 +50,7 @@ header {
     letter-spacing: 0.02em;
     font-weight: 500;
     text-decoration: none;
-    color: var(--font-gray);
+    color:$font-gray;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -113,14 +111,22 @@ header {
   }
   &__hamburger {
     background: url(../images/menu_hamburger.svg);
-    fill: $font-gray;
+    fill: $blue;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
     width: 24px;
     height: 16px;
     position: absolute;
     top: 22px;
     right: 23px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      fill:$blue;
+    }
   }
 }
 

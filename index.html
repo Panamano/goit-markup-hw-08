@@ -58,7 +58,7 @@
             </a>
           </li>
         </ul>
-        <div class="header__hamburger"></div>
+        <div class="header__hamburger js-open-menu"></div>
       </div>
     </header>
     <main>
@@ -178,7 +178,7 @@
           <div class="container">
             <h2 class="section__header">Nasz zespół</h2>
             <ul class="team__list">
-              <li>
+              <li class="team__box">
                 <figure class="team__figure">
                   <img
                     src="images/typ1.jpg"
@@ -216,7 +216,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li>
+              <li class="team__box">
                 <figure class="team__figure">
                   <img
                     src="images/typ2.jpg"
@@ -254,7 +254,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li>
+              <li class="team__box">
                 <figure class="team__figure">
                   <img
                     src="images/typ3.jpg"
@@ -292,7 +292,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li>
+              <li class="team__box">
                 <figure class="team__figure">
                   <img
                     src="images/typ4.jpg"
@@ -458,9 +458,9 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-button" data-modal-close>
-          <svg class="close-btn" width="11px" height="11px">
+          <!-- <svg class="close-btn" width="11px" height="11px">
             <use href="./images/icons.svg#icon-close"></use>
-          </svg>
+          </svg> -->
         </button>
         <h3 class="modal__title">Zostaw swoje dane w formularzu poniżej</h3>
         <form class="modal__form">
@@ -527,6 +527,45 @@
       </div>
     </div>
     <!-- modal end -->
+    <!-- mobile-menu start -->
+    <div class="js-menu-container is-hidden" js-menu-container>
+      <button type="button" class="close-button close-button--mobile js-close-menu">
+        <!-- <svg class="close-btn" width="11px" height="11px">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg> -->
+      </button>
+      <ul class="js-menu-container__navigation">
+        <li class="js-menu-container__item">
+          <a class="js-menu-container__link1" href="./index.html">Agencja</a>
+        </li>
+        <li class="js-menu-container__item">
+          <a class="js-menu-container__link1" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="js-menu-container__item">
+          <a class="js-menu-container__link1" href="/Kontakt">Kontakt</a>
+        </li>
+      </ul>
+      <ul class="js-menu-container__contacts">
+        <li class="js-menu-container__contact">
+          <a class="js-menu-container__phone" href="tel:+48111111111">
+            +48&nbsp111&nbsp111&nbsp111
+          </a>
+        </li>
+        <li class="js-menu-container__contact">
+          <a class="js-menu-container__mail" href="mailto:info@devstudio.com">
+            info@devstudio.com
+          </a>
+        </li>
+      </ul>
+      <ul class="js-menu-container__social">
+        <li class="js-menu-container__social-link">Instagram</li>
+        <li class="js-menu-container__social-link">Twitter</li>
+        <li class="js-menu-container__social-link">Facebook</li>
+        <li class="js-menu-container__social-link">LinkedIn</li>
+      </ul>
+    </div>
+    <!-- mobile-menu end -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
