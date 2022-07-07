@@ -120,6 +120,8 @@ ul {
 }
 .close-button--mobile {
   border: none;
+  top: 21px;
+  right: 25.33px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -275,10 +277,7 @@ header {
   margin-right: 0;
 }
 .header__hamburger {
-  background: url(../images/menu_hamburger.svg);
-  fill: #2196f3;
-  background-repeat: no-repeat;
-  background-size: cover;
+  fill: #212121;
   cursor: pointer;
   width: 24px;
   height: 16px;
@@ -777,7 +776,7 @@ header {
 .footer__newsletter {
   display: block;
   text-indent: 10px;
-  width: 450px;
+  width: auto;
   height: 50px;
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);

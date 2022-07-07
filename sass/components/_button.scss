@@ -2,7 +2,6 @@
   width: 200px;
   height: 50px;
   padding: 0;
-  // padding: 10px 41px 10px 42px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -79,6 +78,8 @@
   }
   &--mobile {
     border: none;
+    top: 21px;
+    right: 25.33px;
   }
 }
 

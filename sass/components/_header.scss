@@ -110,10 +110,10 @@ header {
     margin-right: 0;
   }
   &__hamburger {
-    background: url(../images/menu_hamburger.svg);
-    fill: $blue;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background: url(../images/menu_hamburger.svg);
+   fill: $font-gray;
+    // background-repeat: no-repeat;
+    // background-size: cover;
     cursor: pointer;
     width: 24px;
     height: 16px;
