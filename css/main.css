@@ -613,12 +613,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 210px;
+  max-width: 50%;
   height: 92px;
   border: 1px solid #afb1b8;
   fill: #afb1b8;
   border-radius: 4px;
-  margin-bottom: 30px;
+  margin: 0 30px 30px 0;
   cursor: pointer;
   transition-property: fill, border;
   transition-duration: 250ms;
@@ -636,7 +636,7 @@ header {
   .client__box {
     width: 226px;
   }
-  .client__box:nth-of-type(n + 4) {
+  .client__box:nth-of-type(n + 3) {
     margin: 0;
   }
 }
