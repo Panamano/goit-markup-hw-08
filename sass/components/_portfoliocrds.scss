@@ -1,15 +1,19 @@
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
 
   &__item {
-    margin: 0 0 30px 0;
+    width: 100%;
+    flex: 0 0 100%;
+    // margin: 0 0 30px 0;
   }
-  &__item:nth-child(n + 7) {
-    margin: 0;
-  }
+  // &__item:last-child {
+  //   margin: 0;
+  // }
   &__card {
     margin: 0;
     display: flex;
@@ -37,11 +41,16 @@
     cursor: pointer;
   }
   &__box {
+    width: 100%;
     position: relative;
     overflow: hidden;
   }
   &__box:hover > .portfolio-cards__overlay {
     transform: translateY(0%);
+  }
+  &__picture {
+    display: block;
+    width: 100%;
   }
 
   &__overlay {
@@ -62,7 +71,7 @@
     transition: transform 250ms ease;
   }
   &__card > figcaption {
-    display: block;
+    // display: block;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
@@ -70,6 +79,10 @@
   }
 
   &__title {
+    display: flex;
+    flex-shrink: 1;
+    white-space: normal;
+    width: 100%;
     margin: 0;
     font-family: 'Roboto';
     color: $font-gray;
@@ -77,7 +90,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    letter-spacing: 0.06em;
+    letter-spacing: auto;
   }
   &__description {
     margin: 0;
@@ -89,8 +102,30 @@
     padding: 0 24px 20px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-cards {
+    flex-direction: row;
+    // margin: 0 0 -30px -30px;
+    &__item {
+      flex-basis: calc(100% / 2 - 15px);
+      // &:nth-child(odd) {
+      //   margin: 0 30px 30px 0;
+      // }
+      // &:nth-child(even) {
+      //   margin: 0 0 30px 0;
+      // }
+      // &:last-child {
+      //   margin: 0;
+      // }
+    }
+  }
+}
 @media screen and (min-width: 1200px) {
   .portfolio-cards {
-    justify-content: space-between;
-}
+    flex-direction: row;
+    &__item {
+      flex-basis: calc(100% / 3 - 30px);
+      min-width: 370px;
+    }
+  }
 }

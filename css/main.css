@@ -865,34 +865,34 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-buttons {
     flex-wrap: nowrap;
     justify-content: center;
-    padding-bottom: 30px;
+    padding-bottom: 45px;
   }
 }
 @media screen and (min-width: 1200px) {
   .portfolio-buttons {
     flex-wrap: nowrap;
-    padding-bottom: 35px;
+    padding-bottom: 50px;
     justify-content: center;
   }
 }
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
 }
 .portfolio-cards__item {
-  margin: 0 0 30px 0;
-}
-.portfolio-cards__item:nth-child(n+7) {
-  margin: 0;
+  width: 100%;
+  flex: 0 0 100%;
 }
 .portfolio-cards__card {
   margin: 0;
@@ -919,11 +919,16 @@ header {
   cursor: pointer;
 }
 .portfolio-cards__box {
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
 .portfolio-cards__box:hover > .portfolio-cards__overlay {
   transform: translateY(0%);
+}
+.portfolio-cards__picture {
+  display: block;
+  width: 100%;
 }
 .portfolio-cards__overlay {
   position: absolute;
@@ -943,13 +948,16 @@ header {
   transition: transform 250ms ease;
 }
 .portfolio-cards__card > figcaption {
-  display: block;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   width: 100%;
 }
 .portfolio-cards__title {
+  display: flex;
+  flex-shrink: 1;
+  white-space: normal;
+  width: 100%;
   margin: 0;
   font-family: "Roboto";
   color: #212121;
@@ -957,7 +965,7 @@ header {
   font-weight: 700;
   font-size: 18px;
   line-height: 36px;
-  letter-spacing: 0.06em;
+  letter-spacing: auto;
 }
 .portfolio-cards__description {
   margin: 0;
@@ -969,9 +977,21 @@ header {
   padding: 0 24px 20px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-cards {
+    flex-direction: row;
+  }
+  .portfolio-cards__item {
+    flex-basis: calc(50% - 15px);
+  }
+}
 @media screen and (min-width: 1200px) {
   .portfolio-cards {
-    justify-content: space-between;
+    flex-direction: row;
+  }
+  .portfolio-cards__item {
+    flex-basis: calc(33.3333333333% - 30px);
+    min-width: 370px;
   }
 }
 .modal {
