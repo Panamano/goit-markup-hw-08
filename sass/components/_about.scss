@@ -3,17 +3,6 @@
   flex-direction: column;
   align-items: center;
 
-  // &__header {
-  //   text-align: center;
-  //   margin: 0 0 50px;
-  //   // font-family: 'Roboto';
-  //   font-style: normal;
-  //   font-weight: 700;
-  //   font-size: 36px;
-  //   line-height: 42px;
-  //   text-align: center;
-  //   letter-spacing: 0.03em;
-  // }
   &__list {
     width: 1600px;
     padding: 0px;
@@ -46,7 +35,7 @@
     letter-spacing: 0.03em;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .section--about {
     display: none;
   }

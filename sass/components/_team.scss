@@ -3,37 +3,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1600px;
   margin: 0 auto;
 
   &__bg {
     background-color: $button-gray;
     margin: 0 auto;
   }
-  // &__header {
-  //   text-align: center;
-  //   margin: 0 0 50px;
-  //   font-weight: 700;
-  //   font-size: 36px;
-  //   line-height: 42px;
-  //   letter-spacing: 0.03em;
-  // }
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    // margin: 0 auto;
-  }
   &__box {
-    padding: 0 15px 30px;
+    padding: 0 0 30px;
   }
-  // &__box:first-child {
-  // }
   &__box:last-child {
-    padding-bottom: 0px;
+    padding: 0;
   }
   &__figure {
+    width: 100%;
     margin: 0;
     // padding: 0 15px 30px 15px;
     display: flex;
@@ -44,6 +27,10 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+  }
+  &__picture {
+    display: block;
+    width: 100%;
   }
 
   &__figure-title {
@@ -76,24 +63,39 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .team {
     &__list {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
     }
     &__box {
-      &:nth-child(n + 3) {
-        padding: 0 15px 0;
+      flex: 0 0 50%;
+      &:nth-child(1) {
+        padding: 0 15px 15px 0;
+      }
+      &:nth-child(2) {
+        padding: 0 0 15px 15px;
+      }
+      &:nth-child(3) {
+        padding: 15px 15px 0 0;
+      }
+      &:nth-child(4) {
+        padding: 15px 0 0 15px;
       }
     }
   }
 }
+
 @media screen and (min-width: 1200px) {
   .team {
     &__list {
+      display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-between;
+      justify-content: center;
     }
     &__box {
-      padding: 0 15px 0;
+      flex-basis: calc(100% / 4 - 30px);
+      padding: 0;
+      margin: 0 15px;
     }
   }
 }

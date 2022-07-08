@@ -1,13 +1,11 @@
-.client {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-  }
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -30px -30px 0;
+
   &__box {
     display: flex;
+    flex-basis: calc(100% / 2 - 30px);
     align-items: center;
     justify-content: center;
     max-width: 50%;
@@ -21,9 +19,7 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  &__box:nth-of-type(n + 5) {
-    margin: 0;
-  }
+
   &__box:hover,
   &__box:focus {
     fill: $blue;
@@ -31,21 +27,16 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .client {
+  .clients {
     &__box {
-      width: 226px;
-    }
-    &__box:nth-of-type(n + 3) {
-      margin: 0;
+      flex-basis: calc(100% / 3 - 30px);
     }
   }
 }
 @media screen and (min-width: 1200px) {
-  .client {
-    flex-wrap: nowrap;
+  .clients {
     &__box {
-      width: 170px;
-      margin: 0;
+      flex-basis: calc(100% / 6 - 30px);
     }
   }
 }
