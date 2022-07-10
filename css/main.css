@@ -350,13 +350,13 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  min-height: 400px;
   max-width: 100%;
   margin: 0 auto;
   background-position: center;
   background-repeat: no-repeat;
   background-image: radial-gradient(circle, rgb(63, 94, 251) 0%, rgba(47, 48, 58, 0.4) 0%), url("../images/header-mobile.jpg");
-  background-size: 100%;
+  background-size: cover;
 }
 .bg__list {
   display: flex;
@@ -1067,7 +1067,7 @@ header {
   justify-content: space-around;
 }
 .modal__checkbox {
-  display: block;
+  flex-shrink: 0;
   width: 16px;
   height: 15px;
   outline: none;
@@ -1078,7 +1078,7 @@ header {
 }
 .modal__checkbox--text {
   display: block;
-  text-indent: 8px;
+  margin: 0 0 0 8px;
   color: #757575;
   font-weight: 400;
   font-size: 12px;
@@ -1089,7 +1089,6 @@ header {
   cursor: pointer;
 }
 .modal__checkbox:checked {
-  background-color: #2196f3;
   appearance: none;
   background: url(../images/icon-check.svg);
   background-repeat: no-repeat;
