@@ -38,7 +38,7 @@ ul {
     overflow-x: hidden;
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .section {
     padding: 94px 0;
   }
