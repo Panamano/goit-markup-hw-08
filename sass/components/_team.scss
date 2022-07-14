@@ -1,20 +1,26 @@
 .team {
-  list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
 
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
   &__bg {
     background-color: $button-gray;
     margin: 0 auto;
   }
   &__box {
-    padding: 0 0 30px;
+    flex-basis: 100%;
+    flex-grow: 0;
   }
-  &__box:last-child {
-    padding: 0;
-  }
+  // &__box:last-child {
+  //   padding: 0;
+  // }
   &__figure {
     width: 100%;
     margin: 0;
@@ -59,27 +65,14 @@
     padding: 0 24px 16px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .team {
     &__list {
-      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
     }
     &__box {
-      flex: 0 0 50%;
-      &:nth-child(1) {
-        padding: 0 15px 15px 0;
-      }
-      &:nth-child(2) {
-        padding: 0 0 15px 15px;
-      }
-      &:nth-child(3) {
-        padding: 15px 15px 0 0;
-      }
-      &:nth-child(4) {
-        padding: 15px 0 0 15px;
-      }
+      flex-basis: calc(50% - 15px);
     }
   }
 }
@@ -87,14 +80,7 @@
 @media screen and (min-width: 1200px) {
   .team {
     &__list {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-    &__box {
-      flex-basis: calc(100% / 4 - 30px);
-      padding: 0;
-      margin: 0 15px;
+      flex-wrap: nowrap;
     }
   }
 }
