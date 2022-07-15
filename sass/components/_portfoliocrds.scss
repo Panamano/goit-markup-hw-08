@@ -53,7 +53,7 @@
     position: absolute;
     display: flex;
     align-items: center;
-    padding: 77px 24px;
+    padding: 24px 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
@@ -104,9 +104,9 @@
     &__item {
       flex-basis: calc(100% / 2 - 15px);
     }
-    &__overlay {
-      padding: 49px 24px;
-    }
+    // &__overlay {
+    //   padding: 49px 24px;
+    // }
   }
 }
 @media screen and (min-width: 1200px) {
