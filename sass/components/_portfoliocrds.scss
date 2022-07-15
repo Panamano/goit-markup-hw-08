@@ -9,11 +9,7 @@
   &__item {
     width: 100%;
     flex: 0 0 100%;
-    // margin: 0 0 30px 0;
   }
-  // &__item:last-child {
-  //   margin: 0;
-  // }
   &__card {
     margin: 0;
     display: flex;
@@ -57,7 +53,7 @@
     position: absolute;
     display: flex;
     align-items: center;
-    padding: 49px 45px 49px 24px;
+    padding: 77px 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
@@ -102,30 +98,22 @@
     padding: 0 24px 20px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .portfolio-cards {
     flex-direction: row;
-    // margin: 0 0 -30px -30px;
     &__item {
       flex-basis: calc(100% / 2 - 15px);
-      // &:nth-child(odd) {
-      //   margin: 0 30px 30px 0;
-      // }
-      // &:nth-child(even) {
-      //   margin: 0 0 30px 0;
-      // }
-      // &:last-child {
-      //   margin: 0;
-      // }
+    }
+    &__overlay {
+      padding: 49px 24px;
     }
   }
 }
 @media screen and (min-width: 1200px) {
   .portfolio-cards {
-    flex-direction: row;
+    justify-content: space-between;
     &__item {
       flex-basis: calc(100% / 3 - 30px);
-      min-width: 370px;
     }
   }
 }

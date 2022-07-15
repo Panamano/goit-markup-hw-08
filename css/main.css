@@ -918,7 +918,7 @@ header {
   position: absolute;
   display: flex;
   align-items: center;
-  padding: 49px 45px 49px 24px;
+  padding: 77px 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
@@ -961,21 +961,23 @@ header {
   padding: 0 24px 20px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .portfolio-cards {
     flex-direction: row;
   }
   .portfolio-cards__item {
     flex-basis: calc(50% - 15px);
   }
+  .portfolio-cards__overlay {
+    padding: 49px 24px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .portfolio-cards {
-    flex-direction: row;
+    justify-content: space-between;
   }
   .portfolio-cards__item {
     flex-basis: calc(33.3333333333% - 30px);
-    min-width: 370px;
   }
 }
 .modal {
